@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.daangit.cameraintegration.CameraReceiverController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+<!--                <Insets all="10"/>-->
+            </padding>
+            <ImageView fx:id="qrCodeImageView" fitWidth="200" fitHeight="200" preserveRatio="true"/>
+
+            <ImageView fx:id="imageView" preserveRatio="true" fitWidth="640" fitHeight="480"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="20">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="10"/>
+            </padding>
+            <Label fx:id="statusLabel" text="Status: Initializing..."/>
+            <Label fx:id="ipAddressLabel" text="IP: Detecting..." HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
